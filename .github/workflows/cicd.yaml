@@ -94,9 +94,9 @@ jobs:
         run: |
           echo "📝 Updating manifests for environment: $ENVIRONMENT"
           # Update image
-          sed -i '' "s|image: .*|image: $IMAGE_NAME:$ENVIRONMENT|" k8s/deployment.yaml
+          sed -i "s|image: .*|image: $IMAGE_NAME:$ENVIRONMENT|" k8s/deployment.yaml
           # Update environment variable
-          sed -i '' "s|value: \".*\"|value: \"$ENVIRONMENT\"|" k8s/deployment.yaml
+          sed -i "s|value: \".*\"|value: \"$ENVIRONMENT\"|" k8s/deployment.yaml
 
       - name: 💾 Commit manifest updates
         run: |
