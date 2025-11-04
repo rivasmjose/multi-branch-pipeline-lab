@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
       - name: simple-app
-        image: ghcr.io/rivasmjose/simple-app:dev
+        image: ghcr.io/rivasmjose/simple-app:main
         ports:
         - containerPort: 8080
         env:
         - name: ENVIRONMENT
-          value: "dev"
+          value: "main"
